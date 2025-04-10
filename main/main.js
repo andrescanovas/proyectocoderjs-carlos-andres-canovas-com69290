@@ -17,14 +17,14 @@ function eliminarProducto() {
 }
 
 function mostrarProducto (){
-    console.log("")
+    console.log(" ")
     let idProducto = 0
     
     for(const producto of productos){
         console.log(idProducto +' - '+ producto)
         idProducto ++
     }
-    console.log("")     
+    console.log(" ")     
 
 }
 
