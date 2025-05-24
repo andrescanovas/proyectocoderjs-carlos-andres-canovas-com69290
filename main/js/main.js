@@ -38,7 +38,7 @@ function eliminarProducto(elemento) {
       Toastify({
       text: "Se han eliminado correctamente los datos",
       duration: 1500,
-      destination: "https://github.com/apvarun/toastify-js",
+      destination: "",
       newWindow: true,
       close: true,
       gravity: "top", 
@@ -115,7 +115,7 @@ const registrarDato = () =>{
     Toastify({
       text: "Los datos se han cargado correctamente!!!!!",
       duration: 1500,
-      destination: "https://github.com/apvarun/toastify-js",
+      destination: "",
       newWindow: true,
       close: true,
       gravity: "top", 
