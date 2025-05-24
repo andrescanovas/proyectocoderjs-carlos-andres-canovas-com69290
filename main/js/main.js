@@ -45,7 +45,7 @@ function eliminarProducto(elemento) {
       position: "right", 
       stopOnFocus: true, 
       style: {
-        background: "#98ce3b",
+        background: "#E62117",
       },
       onClick: function(){} // 
     }).showToast();
