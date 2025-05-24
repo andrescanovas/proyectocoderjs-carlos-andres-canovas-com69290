@@ -111,3 +111,13 @@ main {
   
 
 }
+.tarjeta-cliente {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    background-color: #F0F0F0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #2e2e2e;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}

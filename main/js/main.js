@@ -3,10 +3,10 @@ let products = document.getElementById("Lista-de-productos");
 
 let productos = [];
 
-class CargarProductos {
+class Producto {
     static id=0
     constructor(nombre,material,precio,estado) {
-        this.id = ++CargarProductos.id,
+        this.id = ++Producto.id,
         this.nombre =nombre,
         this.material = material,
         this.precio = precio,
@@ -21,14 +21,38 @@ class CargarProductos {
 function eliminarProducto(elemento) {
     const idAEliminar = parseInt(elemento.target.getAttribute("producto-id"));
     
-    
-    productos = productos.filter(producto => producto.id !== idAEliminar);
-  
-   
-    localStorage.setItem("productos", JSON.stringify(productos));
-  
-   
+    Swal.fire({
+    title: '¿Estás seguro?',
+    text: 'Este producto se eliminará permanentemente.',
+    icon: 'error',
+    showCancelButton: true,
+    confirmButtonText: 'SEGURO???',
+    cancelButtonText: 'Cancelar'
+  }).then((eliminar)=>{
+
+    if (eliminar.isConfirmed){
+      productos = productos.filter(producto => producto.id !== idAEliminar);
+      
+      localStorage.setItem("productos", JSON.stringify(productos));
+
+      Toastify({
+      text: "Se han eliminado correctamente los datos",
+      duration: 1500,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", 
+      position: "right", 
+      stopOnFocus: true, 
+      style: {
+        background: "#98ce3b",
+      },
+      onClick: function(){} // 
+    }).showToast();
     mostrarListaDeProductos();
+  }
+  })
+   
   }
 
 
@@ -74,10 +98,34 @@ const registrarDato = () =>{
     let datoPrecio = parseInt(document.getElementById("precio").value);
     let datoestado = document.getElementById("estado").value;
 
-    const nuevoProducto = new CargarProductos(datoNombre,datoMaterial,datoPrecio,datoestado);   
+    if (!datoNombre || !datoMaterial || !datoestado || isNaN(datoPrecio) || datoPrecio <= 0) {
+
+    Swal.fire({
+  title: "PRIMERO LOS DATOS",
+  text: "Deben ingresar datos para cargar",
+  icon: "warning"
+});
+    return;
+  }
+    const nuevoProducto = new Producto(datoNombre,datoMaterial,datoPrecio,datoestado);   
     
     productos.push(nuevoProducto);
     localStorage.setItem("productos", JSON.stringify(productos));
+    
+    Toastify({
+      text: "Los datos se han cargado correctamente!!!!!",
+      duration: 1500,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", 
+      position: "right", 
+      stopOnFocus: true, 
+      style: {
+        background: "linear-gradient(to right,rgb(152, 206, 59)),rgb(152, 206, 59))",
+      },
+      onClick: function(){} 
+    }).showToast();
  
     mostrarListaDeProductos(); 
 }
@@ -92,8 +140,3 @@ if (productosGuardados) {
   productos = JSON.parse(productosGuardados); 
   mostrarListaDeProductos(); 
 }
-
-
-
-
-

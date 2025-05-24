@@ -2,50 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main/css/style.css">
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
 
+  <!-- Toastify -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-    <!-- JS -->
+  <!-- JS -->
 
-    <script defer src="./main/js/main.js"></script>
-    <title>Document</title>
+  <script defer src="./main/js/main.js"></script>
+  <title>Document</title>
 </head>
 
 <body>
 
 
-    <header>
-        <nav class="Nav-bar">
-            <div><h1>Control de pruductos</h1></div>
-            <div><a href="/"></a></div>
-            
-        </nav>
-    </header>
-    <main class="container">
-        <section class="formulario">
-          <form id="form-producto" class="form">
-            <h2>Cargar datos de impreiones </h2>
-            <label class="nombresTitulos">Nombre</label>
-            <input type="text" id="nombre" placeholder="Nombre" required>
-            <label class="nombresTitulos" for="">Material</label>
-            <input type="text" id="material" placeholder="Material" required>
-            <label class="nombresTitulos" for="">Precio</label>
-            <input type="number" id="precio" placeholder="Precio" required>
-            <label class="nombresTitulos" for="">Estado</label>
-            <input type="text" id="estado" placeholder="Estado" required>
-            
-            <button id="botonregistrar" type="button">Agregar</button>
-          </form>
-        </section>
-    
-        <section id="Lista-de-productos"></section>
-      </main>
+  <header>
+    <nav class="Nav-bar">
+      <div>
+        <h1>Control de pruductos</h1>
+      </div>
+      <div><a href="./pages/clientes.html">Clientes</a></div>
 
+    </nav>
+  </header>
+  <main class="container">
+    <section class="formulario">
+      <form id="form-producto" class="form">
+        <h2>Cargar datos de impreiones </h2>
+        <label class="nombresTitulos">Nombre</label>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <label class="nombresTitulos" for="">Material</label>
+        <select id="material" required>
+          <option value="">Seleccioná un material</option>
+          <option value="PLA">PLA</option>
+          <option value="ABS">ABS</option>
+          <option value="PETG">PETG</option>
+          <option value="Resina">Resina</option>
+        </select>
+        <label class="nombresTitulos" for="">Precio</label>
+        <input type="number" id="precio" placeholder="Precio" required>
+        <label class="nombresTitulos" for="">Estado</label>
+        <select id="estado" required>
+          <option value="">Seleccioná un estado</option>
+          <option value="Disponible">Disponible</option>
+          <option value="En producción">En producción</option>
+          <option value="Agotado">Agotado</option>
+        </select>
+        <button id="botonregistrar" type="button">Agregar</button>
+      </form>
+    </section>
+
+    <section id="Lista-de-productos"></section>
+  </main>
+<!-- Sweetalert -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!-- Toastify -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
