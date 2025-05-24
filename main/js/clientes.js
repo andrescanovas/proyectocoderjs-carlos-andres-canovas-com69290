@@ -9,11 +9,10 @@ const obtenerClientes = async () => {
         let respuesta = await solicitud.json()
 
         respuesta.forEach(user => {
-            // se Reasigna con += en rederizado en linea 5
+            
             rederizado += ` 
                             <div class="tarjeta-cliente">
                             <h3>Nombre: ${user.name}</h3>
-                            <p>Usuario: ${user.username}</p>
                             <p>phone: ${user.phone}</p>
                             <p>Email: ${user.email}</p>
                             <p>Compania: ${user.company.name}</p>

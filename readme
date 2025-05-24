@@ -1,0 +1,10 @@
+El proyecto esta diceñado para un organizador de impresiones 3d
+
+En el cual se deben agregar Nombre del producto, el Material, el Precio y el estado en que se encuentra
+No debe permitir que se cree una tarjeta de informacion sin que tenga todos los datos
+Los datos se almacenan en el storage y mostrara un mensaje que se cargaron correctamente
+Si se desean eliminar se debera realizar click en el boton eliminar y mostrara una consulta si se desea proceder con la eliminacion de los datos
+al elimanar la informacion se mostrara un mensaje que se han eliminado correctamente 
+
+en la seccion de clientes se mostraran los clientes con su nombre, telefono email y compania estos son tomados de una api
+
