@@ -33,7 +33,14 @@
     </nav>
   </header>
   <main class="container">
+    
     <section class="formulario">
+      <div id="filtros-orden">
+            <button id="ordenar-nombre">Ordenar por nombre</button>
+            <button id="ordenar-precio">Ordenar por precio</button>
+            <button id="ordenar-estado">Ordenar por estado</button>
+      </div>
+
       <form id="form-producto" class="form">
         <h2>Cargar datos de impreiones </h2>
         <label class="nombresTitulos">Nombre</label>
@@ -58,7 +65,9 @@
         <button id="botonregistrar" type="button">Agregar</button>
       </form>
     </section>
-
+    <section class="busqueda">
+        <input type="text" id="filtro-busqueda" placeholder="Buscar">
+    </section>
     <section id="Lista-de-productos"></section>
   </main>
 <!-- Sweetalert -->

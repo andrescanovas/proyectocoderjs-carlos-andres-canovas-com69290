@@ -5,20 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../main/css/style.css">
-
-
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
-
-    <!-- JS -->
-
     <script defer src="../main/js/clientes.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-
-
     <header>
         <nav class="Nav-bar">
             <div><h1>Control de pruductos</h1></div>
@@ -26,17 +18,25 @@
                 <a href="../index.html">Inicio</a>
                 <a href="clientes.html"></a>
             </div>
-            
         </nav>
     </header>
+
     <main class="container">
         <section class="formulario">
-         <H2>Clientes</H2>
-        </section>
-    
-        <section id="lista-de-clientes"></section>
-      </main>
+            <h2>Clientes</h2>
+            <button id="boton-vaciar-clientes">Vaciar todos</button>
+            <form id="form-clientes">
+                    <input type="text" id="nuevo-nombre" placeholder="Nombre">
+                    <input type="email" id="nuevo-email" placeholder="Email">
+                    <input type="text" id="nuevo-telefono" placeholder="Teléfono">
+                    <input type="text" id="nuevo-compania" placeholder="Compañía">
+            <button type="submit">Agregar cliente</button>
+            </form>
 
+        </section>
+
+        <section id="lista-de-clientes"></section>
+    </main>
 </body>
 
 </html>
