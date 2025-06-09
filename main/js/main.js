@@ -82,25 +82,31 @@ function mostrarListaDeProductos(productosFiltrados = productos) {
   });
 }
 
-document.getElementById("ordenar-nombre")?.addEventListener("click", () => {
-  const ordenados = [...productos].sort((a, b) => a.nombre.localeCompare(b.nombre));
-    
-  mostrarListaDeProductos(ordenados);
-});
 
-document.getElementById("ordenar-precio")?.addEventListener("click", () => {
-  const ordenados = [...productos].sort((a, b) => a.precio - b.precio);
+const btnNombre = document.getElementById("ordenar-nombre");
+if (btnNombre) {
+  btnNombre.addEventListener("click", () => {
+    const ordenados = productos.map(p => p).sort((a, b) => a.nombre.localeCompare(b.nombre));
+    mostrarListaDeProductos(ordenados);
+  });
+}
 
-  mostrarListaDeProductos(ordenados);
+const btnPrecio = document.getElementById("ordenar-precio");
+if (btnPrecio) {
+  btnPrecio.addEventListener("click", () => {
+    const ordenados = productos.map(p => p).sort((a, b) => a.precio - b.precio);
+    mostrarListaDeProductos(ordenados);
+  });
+}
 
+const btnEstado = document.getElementById("ordenar-estado");
+if (btnEstado) {
+  btnEstado.addEventListener("click", () => {
+    const ordenados = productos.map(p => p).sort((a, b) => a.estado.localeCompare(b.estado));
+    mostrarListaDeProductos(ordenados);
+  });
+}
 
-});
-
-document.getElementById("ordenar-estado")?.addEventListener("click", () => {
-      const ordenados = [...productos].sort((a, b) => a.estado.localeCompare(b.estado));
-
-      mostrarListaDeProductos(ordenados);
-});
 
 
 const registrarDato = () => {
